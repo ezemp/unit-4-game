@@ -8,16 +8,31 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel = "stylesheet" type = "text/css" media ="screen" href = "assets/css/style.css"/>
     <script src="assets/javascript/game.js"></script>
-    <script type ="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 <!--images for the crystals -->
-<img href = "assets/images/crystal1.jpg" alt="crystal1">
-<img href = "assets/images/crystal2.jpg" alt = "crystal2">
-<img href = "assets/images/crystal3.jpg" alt = "crystal3">
-<img href = "assets/images/crystal4.jpg" alt = "crystal4">
-<img href = "assets/imgaes/victory.jpg" alt = "victory">
-<img href = "assets/images/defeat.jpg" alt = "defeat">
+<!-- division for the crystals  -->
+<div id ="warpStone">
+    <img class = "crystal-img" src = "assets/images/crystal1.jpg" alt="crystal1">
+    <img class = "crystal-img " src = "assets/images/crystal2.jpg" alt = "crystal2">
+    <img class = "crystal-img" src = "assets/images/crystal3.jpg" alt = "crystal3">
+    <img class = "crystal-img" src = "assets/images/crystal4.jpg" alt = "crystal4">
+</div>
+<div id ="victory">
+    <img class = "victor-img" src = "assets/images/victory.jpg" alt = "victory">
+</div>
+<div id = "defeat">
+    <img class = "defeat-img" src = "assets/images/defeat.jpg" alt = "defeat">
+</div>
+<script type = "text/javascript">
+$(".victor-img").hide();
+$(".defeat-img").hide();
+$(".crystal-img").on("click",function(){
+    alert("You clicked a warpstone")
+})
+
+</script>
 
 
 <!-- need to assign values for crystals -->
